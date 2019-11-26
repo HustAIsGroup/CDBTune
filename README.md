@@ -104,7 +104,7 @@
     
 16. 将CDBTune1的/home/cheng/AutoTuner/environment/mysql.py中的TEMP_FILES和PROJECT_DIR变量中的用户名改为”cheng”（服务器的用户名）。
 
-17. 将CDBTune1的/home/cheng/AutoTuner/scripts/run_sysbench.sh中的script_path中的用户名修改为”cheng”（服务器的用户名）。
+17. 将CDBTune1的/home/cheng/AutoTuner/scripts/run_sysbench.sh中的script_path修改为"/usr/share/sysbench/"。
 
 18. 需要自行设置environment模块下knobs.py文件中各个knob的默认值。
 
