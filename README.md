@@ -9,7 +9,7 @@
 
 1. 将训练模型的项目AutoTuner放至两台服务器的用户cheng的home目录下，即目录为：/home/cheng/AutoTuner（项目名称请保持AutoTuner不变）。
 
-2. 在CDBTune1安装sysbench1.0，安装方法参考：[Ubuntu安装sysbench1.0](https://blog.csdn.net/cxin917/article/details/81557453)。另外，需要把一份含lua脚本的sysbench压缩包（sysbench1.0文件夹，即项目里的sysbench-1.0压缩包）解压放至用户cheng的home目录下。
+2. 在CDBTune1安装sysbench1.0，安装方法参考：[Ubuntu安装sysbench1.0](https://blog.csdn.net/cxin917/article/details/81557453)。
 
 3. 在CDBTune2安装mysql5.6（注意版本，是5.6！！！），root初始密码设置为123456。安装完成后，使用命令 sudo service mysql start 开启mysql服务。
 
@@ -29,7 +29,7 @@
    select name from innodb_metrics where status="enabled" order by name; 
    ```
 
-   将得到的结果与AutoTuner\debug\internal_metrics.md文件中的63个内部向量进行对比，将不在其中的向量（没有开启）开启。比如：在我安装的mysql中，adaptive_hash_searches_btree这个向量默认是没有开启的，所以在mysql中使用如下命令：
+   再使用如下命令将adaptive_hash_searches_btree这个向量开启：
 
    ```mysql
    set global innodb_monitor_enable = "adaptive_hash_searches_btree";
@@ -37,7 +37,7 @@
 
    打开计数器即可。具体计数器打开/关闭/重置可以参考：[mysql如何打开/关闭/重置计数器](https://www.cnblogs.com/yuyutianxia/p/7747035.html)
 
-7. 在CDBTune1上使用sysbench对CDBTune2的sbtest进行初始化，使用的是/home/cheng/AutoTuner/scripts/prepare.sh脚本，首先用vim将prepare.sh中的script_path修改为："/home/cheng/sysbench-1.0/src/lua/" （注意最后有一个”/”）。之后使用命令：
+7. 在CDBTune1上使用sysbench对CDBTune2的sbtest进行初始化，使用的是/home/cheng/AutoTuner/scripts/prepare.sh脚本，首先用vim将prepare.sh中的script_path修改为："/usr/share/sysbench/" （注意最后有一个”/”）。之后使用命令：
 
    ```bash
    sh prepare.sh read 192.168.110.11 3306 123456
