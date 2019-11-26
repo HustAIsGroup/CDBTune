@@ -160,3 +160,6 @@
 **Q:** 安装requirement.txt的MySQL-python==1.2.3报错：Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-_pzcr1qo/MySQL-python/。
 
 **A:** 使用pip安装容易出错，使用以下两个命令安装MySQL-python：sudo apt-get install libmysql++-dev;sudo easy_install MySQL-python.参考：[安装MySQLdb发生EnvironmentError: mysql_config not found](https://blog.csdn.net/xgocn/article/details/82893266)。安装成功后，删除requirement.txt中的第一行，再使用pip安装requirement.txt。
+
+**Q:** 报错：Setup script exited with error: command 'x86_64-linux-gnu-gcc' failed with exit status 1。
+**A:** 原因是缺少依赖。参考：[解决Python缺少依赖](https://blog.csdn.net/u012798683/article/details/88403066)解决方法。
