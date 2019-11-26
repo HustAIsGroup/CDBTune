@@ -51,7 +51,7 @@
    pip install -i http://mirrors.aliyun.com/pypi/simple/ -r requirements.txt --trusted-host mirrors.aliyun.com --user
    ```
 
-   若报错，可看报错解决。
+   **若报错，可看报错解决。**
 
 9. 在CDBTune2上安装pexpect，执行如下命令：
 
