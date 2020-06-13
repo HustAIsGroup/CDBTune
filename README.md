@@ -2,8 +2,8 @@
 
 | 主机名   | ip             | 必装软件    | 功能               | 举例用户 | 密码   | 操作系统    | Python版本 |
 | -------- | -------------- | ----------- | ------------------ | -------- | ------ | ----------- | ---------- |
-| CDBTune1 | 192.168.110.10 | sysbench1.0 | 网络训练，主动压测 | cheng    | 123456 | Ubuntu16.04 | 2.x        |
-| CDBTune2 | 192.168.110.11 | mysql5.6    | 数据库服务器       | cheng    | 123456 | Ubuntu16.04 | 2.x        |
+| CDBTune1 | 192.168.110.10 | sysbench1.0 | 网络训练，主动压测 | cheng    | 123456 | Ubuntu16.04 | 2.7        |
+| CDBTune2 | 192.168.110.11 | mysql5.6    | 数据库服务器       | cheng    | 123456 | Ubuntu16.04 | 2.7        |
 
 ### 搭建步骤
 
@@ -48,7 +48,7 @@
 8. 对两台机器，都进行requirement.txt的安装（使用pip安装，注意不是pip3）。首先进入项目home目录，即/home/cheng/AutoTuner，再执行命令 
 
    ```bash
-   pip install -i http://mirrors.aliyun.com/pypi/simple/ -r requirements.txt --trusted-host mirrors.aliyun.com --user
+   pip install -r requirements.txt --user
    ```
 
    **若报错，可看报错解决。**
