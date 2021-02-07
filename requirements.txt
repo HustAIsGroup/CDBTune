@@ -8,7 +8,7 @@ futures==3.2.0
 idna==2.6
 MySQL-python==1.2.5
 numpy==1.14.5
-psutil==5.4.6
+psutil==5.6.6
 pycosat==0.6.3
 pycparser==2.18
 pyOpenSSL==18.0.0
