@@ -13,7 +13,7 @@ pycosat==0.6.3
 pycparser==2.18
 pyOpenSSL==18.0.0
 PySocks==1.6.8
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.4
 ruamel-yaml==0.15.37
 six==1.11.0
